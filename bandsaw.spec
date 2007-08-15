@@ -8,7 +8,7 @@
 Summary: 	%Summary
 Name: 		%name
 Version: 	%version
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 License: GPL
 Group: 		System/Servers
 URL:		http://bandsaw.sourceforge.net/
@@ -102,6 +102,5 @@ rm -rf %buildroot
 %_miconsdir/%name.png
 %_iconsdir/%name.png
 %py_platlibdir/site-packages/*
-%exclude %{_localstatedir}/scrollkeeper/*
 %{_datadir}/pixmaps/%name/*
 
