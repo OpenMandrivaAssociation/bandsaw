@@ -101,6 +101,6 @@ rm -rf %buildroot
 %_liconsdir/%name.png
 %_miconsdir/%name.png
 %_iconsdir/%name.png
-%py_platlibdir/site-packages/*
+%py_puresitedir/*
 %{_datadir}/pixmaps/%name/*
 
