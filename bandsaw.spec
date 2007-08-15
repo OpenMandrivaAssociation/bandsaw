@@ -21,6 +21,7 @@ BuildRoot: 	%_tmppath/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:	scrollkeeper, GConf2, pkgconfig
 BuildRequires:  pygtk2.0-devel, gnome-python 
+BuildRequires:	desktop-file-utils
 
 Requires: pygtk2.0, gnome-python, python, gnome-python-gconf
 
@@ -56,8 +57,12 @@ needs="x11" \
 icon="%name.png" \
 section="%section" \
 title="%title" \
-longtitle="%Summary"
+longtitle="%Summary" \
+xdg="true"
 EOF
+
+desktop-file-install --vendor="" \
+  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
 # icon
 mkdir -p %buildroot/{%_liconsdir,%_iconsdir,%_miconsdir}
