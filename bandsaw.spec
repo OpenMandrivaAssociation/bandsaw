@@ -17,7 +17,6 @@ Source: 	http://aleron.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}
 Source1:	%name-16.png
 Source2:	%name-32.png
 Source3:	%name.png
-BuildRoot: 	%_tmppath/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:	scrollkeeper, GConf2, pkgconfig
 BuildRequires:  pygtk2.0-devel, gnome-python 
