@@ -49,17 +49,6 @@ GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std
 %find_lang %name --with-gnome
 
 # menu
-mkdir -p %buildroot/%_menudir
-cat > %buildroot/%_menudir/%name << EOF
-?package(%name): \
-command="%_bindir/%name" \
-needs="x11" \
-icon="%name.png" \
-section="%section" \
-title="%title" \
-longtitle="%Summary" \
-xdg="true"
-EOF
 
 desktop-file-install --vendor="" \
   --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
@@ -102,7 +91,6 @@ rm -rf %buildroot
 %{_datadir}/%{name}/glade/*
 %{_datadir}/omf/%{name}/
 %{_datadir}/applications/%{name}.desktop
-%_menudir/%name
 %_liconsdir/%name.png
 %_miconsdir/%name.png
 %_iconsdir/%name.png
