@@ -63,9 +63,7 @@ install -m 644 %SOURCE3 %buildroot/%_iconsdir/%name.png
 %post
 %update_menus
 %post_install_gconf_schemas %{name}
-if [ -x %{_bindir}/scrollkeeper-update ]; then %{_bindir}/scrollkeeper-update -q -o %{_datadir}/omf/%{name}; fi
-touch %{_datadir}/gnome/help/%{name}/C/%{name}.html
-if [ -x %{_bindir}/yelp-pregenerate ]; then %{_bindir}/yelp-pregenerate %{_datadir}/gnome/help/%{name}/*/%name.xml > /dev/null; fi
+%update_scrollkeeper
 
 %preun
 %preun_uninstall_gconf_schemas %{name}
