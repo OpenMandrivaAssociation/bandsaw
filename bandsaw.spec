@@ -60,17 +60,21 @@ install -m 644 %SOURCE1 %buildroot/%_miconsdir/%name.png
 install -m 644 %SOURCE2 %buildroot/%_liconsdir/%name.png
 install -m 644 %SOURCE3 %buildroot/%_iconsdir/%name.png
 
+%if %mdkversion < 200900
 %post
 %update_menus
 %post_install_gconf_schemas %{name}
 %update_scrollkeeper
+%endif
 
 %preun
 %preun_uninstall_gconf_schemas %{name}
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
 %clean_scrollkeeper
+%endif
 
 %clean
 rm -rf %buildroot
