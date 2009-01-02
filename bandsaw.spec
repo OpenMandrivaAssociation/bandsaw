@@ -20,7 +20,7 @@ Source3:	%name.png
 BuildRoot: 	%_tmppath/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:	scrollkeeper, GConf2, pkgconfig
-BuildRequires:  pygtk2.0-devel, gnome-python 
+BuildRequires:  pygtk2.0-devel, gnome-python-devel 
 BuildRequires:	desktop-file-utils
 
 Requires: pygtk2.0, gnome-python, python, gnome-python-gconf
