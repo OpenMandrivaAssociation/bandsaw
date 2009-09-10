@@ -8,7 +8,7 @@
 Summary: 	%Summary
 Name: 		%name
 Version: 	%version
-Release: 	%mkrel 5
+Release: 	%mkrel 6
 License: GPL
 Group: 		System/Servers
 URL:		http://bandsaw.sourceforge.net/
