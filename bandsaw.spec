@@ -7,7 +7,7 @@ Version: 	0.3.0
 Release: 	9
 License: GPL
 Group: 		System/Servers
-URL:		http://bandsaw.sourceforge.net/
+URL:		https://bandsaw.sourceforge.net/
 
 Source: 	http://aleron.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
 Source1:	%name-16.png
