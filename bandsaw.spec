@@ -14,6 +14,11 @@ Source1:	%name-16.png
 Source2:	%name-32.png
 Source3:	%name.png
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	scrollkeeper, GConf2, pkgconfig
 BuildRequires:  pygtk2.0-devel, gnome-python-devel 
 BuildRequires:	desktop-file-utils
